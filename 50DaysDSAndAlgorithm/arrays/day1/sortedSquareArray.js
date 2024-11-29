@@ -19,7 +19,7 @@ function sortedSquaredArray2(array) {
     const newArray = new Array(array.length).fill(0);
     let pointerLeft = 0;
     let pointerRight = array.length - 1;
-    for (let i = 0; i < array.length; i++) {
+    for (let i = array.length-1; i >= 0; i--) {
         const leftSquare = Math.pow(array[pointerLeft], 2);
         const rightSquare = Math.pow(array[pointerRight], 2);
         if (leftSquare > rightSquare) {
@@ -34,7 +34,7 @@ function sortedSquaredArray2(array) {
 }
 
 let arr = [-12, 5, 2, -3, 10, -15];
-let arr2 = [2];
+let arr2 = [1,2,3,4,5];
 let sortedArray = sortedSquaredArray1(arr);
 let sortedArray2 = sortedSquaredArray2(arr2);
 
