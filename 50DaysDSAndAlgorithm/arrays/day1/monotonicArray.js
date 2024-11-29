@@ -50,9 +50,11 @@ const isMonotonic2 = (array) => {
 let arr = [122, 2, 3, 3, 52];
 let arr1 = [8, 3, 3, 22, -1];
 let arr2 = [3, 3, 3];
+let arr3 = [3, 3, 37,5,6];
 console.log(isMonotonic2(arr));
 console.log(isMonotonic2(arr1));
 console.log(isMonotonic2(arr2));
+console.log(isMonotonic2(arr3));
 
 /*
 1, 2, 3, 4, 5
