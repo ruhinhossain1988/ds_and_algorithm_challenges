@@ -21,10 +21,38 @@ const isMonotonic = function (array){
     return increasing || decreasing;
 }
 
-let arr = [1, 2, 3, 3, 5];
-let arr1 = [8, 3, 3, 2, -1];
-console.log(isMonotonic(arr));
-console.log(isMonotonic(arr1));
+const isMonotonic2 = (array) => {
+    if (array.length === 0) {
+        return true;
+    }
+    if (array.length === 1) {
+        return true;
+    }
+    const first = array[0];
+    const last = array[array.length-1];
+    if (first === last) {
+        for (let i = 0; i < array.length-1; i++) {
+            if (array[i+1] !== array[i]) return false;
+        }
+    }else if (first<last){
+        for (let i = 0; i < array.length-1; i++) {
+            if (array[i+1] < array[i]) return false;
+        }
+    }else {
+        //first>last
+        for (let i = 0; i < array.length-1; i++) {
+            if (array[i+1] > array[i]) return false;
+        }
+    }
+    return true;
+}
+
+let arr = [122, 2, 3, 3, 52];
+let arr1 = [8, 3, 3, 22, -1];
+let arr2 = [3, 3, 3];
+console.log(isMonotonic2(arr));
+console.log(isMonotonic2(arr1));
+console.log(isMonotonic2(arr2));
 
 /*
 1, 2, 3, 4, 5
