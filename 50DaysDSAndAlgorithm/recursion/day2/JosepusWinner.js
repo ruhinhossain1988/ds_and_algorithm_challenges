@@ -27,8 +27,17 @@ let findTheWinner2 = function (n, k) {
     return josephus(n) + 1;
 };
 
+let findTheWinner3 = function (n, k) {
+    let survivor = 0;
+    for (let i = 2; i <=n; i++) {
+        survivor = (survivor + k) % i;
+    }
+    return survivor + 1;
+}
+
 console.log(findTheWinner1(4, 7))
 console.log(findTheWinner2(4, 7))
+console.log(findTheWinner3(5, 2))
 
 /*
 Pseudocode for the approach2
