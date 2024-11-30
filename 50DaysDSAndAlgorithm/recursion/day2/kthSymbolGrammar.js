@@ -21,4 +21,4 @@ let kthGrammar = function (n, k) {
     }
 }
 
-console.log(kthGrammar(4, 5));
+console.log(kthGrammar(4, 4));
